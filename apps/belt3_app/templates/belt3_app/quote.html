@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Quote</title>
+</head>
+<body>
+	<h1>Hello {{ request.session.first_name }}, what quote do you have for us today?</h1><a href="/logout"></a>
+	<form action="/quote" method="post">
+		{% csrf_token %}
+	<label>Quote:</label><input type="text" name="quote">
+	</form>
+	
+
+</body>
+</html>
